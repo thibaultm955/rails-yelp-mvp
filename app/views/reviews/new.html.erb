@@ -1,0 +1,9 @@
+
+<%= form_for([@restaurant, @review]) do |f| %>
+  <%= f.label(:content, "content:") %>
+  <%= f.text_field :content %><br>
+  <%= f.label(:rating, "rating:") %>  
+  <%= f.number_field( :rating, in:1.0..5.0, step: 1.0) %> <br>
+  <%= f.submit "Submit Review", class: "btn btn-primary" %>
+  
+<% end %>

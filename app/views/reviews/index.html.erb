@@ -1,0 +1,11 @@
+<h1> List Reviews for <%=@restaurant.name%> </h1>
+<ul>
+    <%@reviews.each do |review|%>
+     <li class="list-group-item"><%= review.content %></li>
+     <%end%>
+</ul>
+<a href=".."> Go back to the list of restaurants </a>
+<br>
+
+
+<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant) %>

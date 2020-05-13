@@ -1,0 +1,11 @@
+<%= form_with model: @restaurant do |f| %>
+  <%= f.label(:name, "name:") %>
+  <%= f.text_field :name %><br>
+  <%= f.label(:address, "address:") %>  
+  <%= f.text_field :address %> <br>
+  <%= f.label(:category, "category:") %>  
+  <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"]%><br>
+  <input name="authenticity_token" type="hidden" value="J7CBxfHalt49OSHp27hblqK20c9PgwJ108nDHX/8Cts=" />
+  <%= f.submit "Submit Restaurant", class: "btn btn-primary" %>
+  
+<% end %>
